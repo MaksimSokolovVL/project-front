@@ -1,11 +1,132 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>RPG</title>
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
     <link href="/css/my.css" rel="stylesheet">
-</head>
-<body>
-<h1>RPG admin panel</h1>
+    <!-- <link href="\src\main\webapp\css\my.css" rel="stylesheet"> -->
 
+</head>
+
+<body>
+<h1 class="top-h1">RPG admin panel</h1>
+
+<h2>Account list:</h2>
+
+<label class="label" for="count-1">Count per page:</label>
+<select id="count-1" onchange="listPlayers(0)">
+    <option value="3">3</option>
+    <option value="9">9</option>
+    <option value="15">15</option>
+    <option value="20">20</option>
+</select>
+
+<div class="div-table">
+    <table class="table" id="table-id" name="game-table">
+        <thead>
+        <tr>                    <!--строка таблицы-->
+            <th>#</th>          <!--ячейка заголовка-->
+            <th>Name</th>
+            <th>Title</th>
+            <th>Race</th>
+            <th>Profession</th>
+            <th>Level</th>
+            <th>Birthday</th>
+            <th>Banned</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        <script>window.onload = function () {
+            listPlayers(0)
+        } </script>
+        </tbody>
+    </table>
+</div>
+
+<div class="div-bottom" id="navbar-button">
+    Pages:
+</div>
+<hr>
+<div class="div-new-account">
+<h2>Create new account:</h2>
+
+<label for="input_new_name">Name:
+    <input type="text" id="input_new_name" name="name" required size="12" maxlength="12"></label><br>
+
+<label for="input_new_title">Title:
+    <input type="text" id="input_new_title" name="title" required size="30" maxlength="30"></label><br>
+
+<label for="select_new_race">Race:</label>
+<select id="select_new_race" name="race"></select>
+<br>
+
+<label for="select_new_prof">Profession:</label>
+<select id="select_new_prof" name="profession"></select>
+<br>
+
+<label for="input_new_lvl">Level:
+    <input id="input_new_lvl" name="level" min="0" max="100" type="number"></label><br>
+
+<label for="select_new_birthday">Birthday:
+    <input id="select_new_birthday" name="birthday" type="date" min="2000-01-01" max="3000-12-31"></label><br>
+
+<label for="select_new_banned">Banned:</label>
+<select id="select_new_banned" name='banned'>
+    <option value='true'>true</option>
+    <option value='false'>false</option>
+</select><br>
+    <br>
+<span>
+    <button type="submit" onclick="newAccount()">Save</button>
+</span>
+</div>
+
+<!-- <script src="\src\main\webapp\js\my.js"></script> -->
+<script src="/js/my.js"></script>
+
+<script>
+    let js = document.createElement("script");
+    js.src = "/js/my.js?" + Date.now();
+    document.body.appendChild(js);
+
+    const race_array = {
+        HUMAN: 'HUMAN',
+        DWARF: 'DWARF',
+        ELF: 'ELF',
+        GIANT: 'GIANT',
+        ORC: 'ORC',
+        TROLL: 'TROLL',
+        HOBBIT: 'HOBBIT'
+    };
+
+    const select_race = document.getElementById('select_new_race');
+    for (let index in race_array) {
+        select_race.options[select_race.options.length] = new Option(race_array[index], index);
+    }
+
+    const profession_array = {
+        WARRIOR: 'WARRIOR',
+        ROGUE: 'ROGUE',
+        SORCERER: 'SORCERER',
+        CLERIC: 'CLERIC',
+        PALADIN: 'PALADIN',
+        NAZGUL: 'NAZGUL',
+        WARLOCK: 'WARLOCK',
+        DRUID: 'DRUID'
+    };
+
+    const select_prof = document.getElementById('select_new_prof');
+    for (let index in profession_array) {
+        select_prof.options[select_prof.options.length] = new Option(profession_array[index], index);
+    }
+
+</script>
 </body>
 </html>

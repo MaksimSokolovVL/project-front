@@ -1,0 +1,73 @@
+body {
+    /* background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1612369041_22-p-starinnii-korichnevii-fon-28.jpg"); */
+    background: linear-gradient(rgba(75, 75, 75, 0.546),
+    rgba(75, 75, 75, 0.546)),
+    url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612369041_22-p-starinnii-korichnevii-fon-28.jpg);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.top-h1 {
+    font-size: 30px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: rgb(255, 225, 0);
+}
+
+/*.div-table {*/
+/*    background: rgb(206, 223, 254);*/
+/*    width: 80%;*/
+/*    height: 200px;*/
+/*}*/
+
+.table {
+    width: 80%;
+    border-collapse: collapse;
+    background: beige;
+}
+
+thead tr, th {
+    background-color: #f8d16d;
+    color: #000000;
+    text-align: center;
+    border: 1px solid black;
+}
+
+tbody td {
+    border: 1px solid #644b12;
+    padding: 5px;
+}
+
+th {
+    text-align: center;
+}
+
+td {
+    padding-left: 1%;
+}
+
+.div-bottom {
+    background: rgb(206, 223, 254);
+    width: 80%;
+}
+
+.label{
+    color: #f8d16d;
+}
+
+.div-new-account{
+    background: linear-gradient(rgba(255, 0, 0, 0.55),
+    rgba(255, 157, 0, 0.74));
+    width: fit-content;
+}
+
+/* a {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+} */
