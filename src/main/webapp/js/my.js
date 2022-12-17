@@ -9,8 +9,6 @@ function listPlayers(inPageNumber) {
     cleanButton()
     createButton()
 
-    console.log(`labelCountPages url ${labelCountPages}`)
-
     let url = `/rest/players?`
     const pageSize = `pageSize=${labelCountPages}`
     const pageNumber = `pageNumber=${inPageNumber}`
@@ -18,10 +16,6 @@ function listPlayers(inPageNumber) {
 
     changeColorButton(inPageNumber)
     numberPage = inPageNumber
-
-    console.log(numberPage)
-
-    console.log(url)
 
     $.get(url, function (response) {
         $.each(response, function (index, item) {
@@ -40,8 +34,6 @@ function listPlayers(inPageNumber) {
                 )
         })
     })
-
-
 }
 
 function getAllAccount() {
@@ -123,12 +115,6 @@ function editAccount(id) {
 
     td_profession.innerHTML = getLabelProfession(id)
     $(prof_id).val(prof_current_value).change()
-
-    // let td_level = columns[5]
-    // td_level.innerHTML = "<input id='input_lvl_" + id + "' type='number' value='" + td_level.innerHTML +"'>"
-
-    // let td_birthday = columns[6]
-    // td_birthday.innerHTML = "<input id='input_birthday_" + id + "' type='date' value='" + td_birthday.innerHTML +"'>"
 
     let td_banned = columns[7]
     let banned_id = `#select_banned_${id}`
