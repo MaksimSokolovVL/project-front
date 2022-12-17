@@ -1,14 +1,16 @@
 body {
     /* background-image: url("https://catherineasquithgallery.com/uploads/posts/2021-02/1612369041_22-p-starinnii-korichnevii-fon-28.jpg"); */
     background: linear-gradient(rgba(75, 75, 75, 0.546),
-    rgba(75, 75, 75, 0.546)),
-    url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612369041_22-p-starinnii-korichnevii-fon-28.jpg);
+            rgba(75, 75, 75, 0.546)),
+        url(https://catherineasquithgallery.com/uploads/posts/2021-02/1612369041_22-p-starinnii-korichnevii-fon-28.jpg);
     font-family: Arial, Helvetica, sans-serif;
 }
 
 
 .top-h1 {
     font-size: 30px;
+    font-family: 'Diablo', sans-serif;
+    text-align: center;
 }
 
 h1,
@@ -20,19 +22,23 @@ h6 {
     color: rgb(255, 225, 0);
 }
 
-/*.div-table {*/
-/*    background: rgb(206, 223, 254);*/
-/*    width: 80%;*/
-/*    height: 200px;*/
-/*}*/
-
 .table {
     width: 80%;
     border-collapse: collapse;
     background: beige;
+    margin: 0 auto;
 }
 
-thead tr, th {
+.div-table {
+    padding-top: 50px;
+}
+
+.center {
+    text-align: center;
+}
+
+thead tr,
+th {
     background-color: #f8d16d;
     color: #000000;
     text-align: center;
@@ -55,19 +61,169 @@ td {
 .div-bottom {
     background: rgb(206, 223, 254);
     width: 80%;
+    margin: 0 auto;
 }
 
-.label{
+.label {
     color: #f8d16d;
 }
 
-.div-new-account{
+.div-new-account {
     background: linear-gradient(rgba(255, 0, 0, 0.55),
-    rgba(255, 157, 0, 0.74));
+            rgba(255, 157, 0, 0.74));
     width: fit-content;
+    padding-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+}
+
+.button_div {
+    text-align: center;
 }
 
 /* a {
     color: rgb(255, 0, 0);
     text-decoration: none;
 } */
+
+/*.button_gif {*/
+
+/*    */
+/*   */
+/*    ;*/
+/*    background: white;*/
+/*    }*/
+
+.button_gif {
+    transition-duration: 0.4s;
+    background-color: white;
+    border-radius: 5px;
+    border: 0;
+}
+
+.button_gif:hover {
+    background-color: #b7b7b7;
+    color: white;
+}
+
+.img_gif {
+    width: 42px;
+    height: 42px;
+}
+
+.h2_create_acc {
+    font-family: 'Diablo', sans-serif;
+    text-align: center;
+}
+
+a.save_button {
+    position: relative;
+    display: block;
+    color: #000000;
+    text-decoration: none;
+    margin: 20px auto;
+    text-align: center;
+    width: 125px;
+
+    font-size: 26px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid transparent;
+    font-family: 'Diablo', sans-serif;
+
+}
+
+a.save_button:hover,
+a.obl:focus {
+    outline: none;
+    border-bottom: 2px solid #eee;
+}
+
+a.save_button::before,
+a.obl:after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 70px;
+    height: 70px;
+    border: 12px double rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+    content: '';
+    opacity: 0;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.2);
+    transform: translateX(-50%) translateY(-50%) scale(0.2);
+}
+
+a.save_button:after {
+    width: 60px;
+    height: 60px;
+    border-width: 6px;
+    -webkit-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    -moz-transform: translateX(-50%) translateY(-50%) scale(0.8);
+    transform: translateX(-50%) translateY(-50%) scale(0.8);
+}
+
+a.save_button:hover:before,
+a.obl:hover:after {
+    -webkit-animation: pulsate 1.2s infinite;
+    -moz-animation: pulsate 1.2s infinite;
+    -ms-animation: pulsate 1.2s infinite;
+    animation: pulsate 1.2s infinite;
+}
+
+@-webkit-keyframes pulsate {
+
+    30% {
+        opacity: 1;
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+
+    100% {
+        opacity: 0.3;
+        -webkit-transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
+
+}
+
+@-moz-keyframes pulsate {
+
+    30% {
+        opacity: 1;
+        -moz-transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+
+    100% {
+        opacity: 0.3;
+        -moz-transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
+
+}
+
+@-ms-keyframes pulsate {
+
+    30% {
+        opacity: 1;
+        -ms-transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+
+    100% {
+        opacity: 0.3;
+        -ms-transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
+
+}
+
+@-keyframes pulsate {
+
+    30% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+
+    100% {
+        opacity: 0.3;
+        transform: translateX(-50%) translateY(-50%) scale(0.5);
+    }
+}

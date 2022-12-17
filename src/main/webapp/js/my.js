@@ -27,19 +27,21 @@ function listPlayers(inPageNumber) {
         $.each(response, function (index, item) {
             $("#table-id").find('tbody')
                 .append($('<tr>')
-                    .append($('<td>').text(item.id))
+                    .append($('<td class="center">').text(item.id))
                     .append($('<td>').text(item.name))
                     .append($('<td>').text(item.title))
-                    .append($('<td>').text(item.race))
-                    .append($('<td>').text(item.profession))
-                    .append($('<td>').text(item.level))
-                    .append($('<td>').text(new Date(item.birthday).toLocaleDateString()))
-                    .append($('<td>').text(item.banned))
-                    .append($('<td>').append(`<button id=button_edit_${item.id} onclick=editAccount(${item.id})> <img src="/img/edit.png" alt="#">`))
-                    .append($('<td>').append(`<button id=button_delet_${item.id} onclick=deleteAccount(${item.id})> <img src="/img/delete.png" alt="#">`))
+                    .append($('<td class="center">').text(item.race))
+                    .append($('<td class="center">').text(item.profession))
+                    .append($('<td class="center">').text(item.level))
+                    .append($('<td class="center">').text(new Date(item.birthday).toLocaleDateString()))
+                    .append($('<td class="center">').text(item.banned))
+                    .append($('<td class="center">').append(`<button class="button_gif" id=button_edit_${item.id} onclick=editAccount(${item.id})> <img class="img_gif"  src="/img/edit1.gif" alt="#">`))
+                    .append($('<td class="center">').append(`<button class="button_gif" id=button_delet_${item.id} onclick=deleteAccount(${item.id})> <img class="img_gif" src="/img/delete.gif" alt="#">`))
                 )
         })
     })
+
+
 }
 
 function getAllAccount() {
@@ -97,7 +99,7 @@ function editAccount(id) {
     let buttonEdit = `#button_edit_${id}`
     let buttonDelete = `#button_delet_${id}`
     $(buttonDelete).hide()
-    $(buttonEdit).html(`<img src="/img/save.png" alt="#">`)
+    $(buttonEdit).html(`<img src="/img/save.gif" width="40px" height="40px" alt="#">`)
 
     let current_tr_element = $(buttonEdit).parent().parent()
     let columns = current_tr_element.children()

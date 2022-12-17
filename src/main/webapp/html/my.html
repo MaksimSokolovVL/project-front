@@ -9,6 +9,7 @@
     <title>RPG</title>
     <script src=https://code.jquery.com/jquery-3.6.0.min.js></script>
     <link href="/css/my.css" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/diablo" rel="stylesheet">
     <!-- <link href="\src\main\webapp\css\my.css" rel="stylesheet"> -->
 
 </head>
@@ -25,6 +26,7 @@
     <option value="15">15</option>
     <option value="20">20</option>
 </select>
+
 
 <div class="div-table">
     <table class="table" id="table-id" name="game-table">
@@ -55,7 +57,7 @@
 </div>
 <hr>
 <div class="div-new-account">
-<h2>Create new account:</h2>
+<h2 class="h2_create_acc">Create new account:</h2>
 
 <label for="input_new_name">Name:
     <input type="text" id="input_new_name" name="name" required size="12" maxlength="12"></label><br>
@@ -83,9 +85,11 @@
     <option value='false'>false</option>
 </select><br>
     <br>
+    <div class="button_div">
 <span>
-    <button type="submit" onclick="newAccount()">Save</button>
+    <a class="save_button" type="submit" onclick="newAccount()">Save</a>
 </span>
+</div>
 </div>
 
 <!-- <script src="\src\main\webapp\js\my.js"></script> -->
@@ -126,6 +130,7 @@
     for (let index in profession_array) {
         select_prof.options[select_prof.options.length] = new Option(profession_array[index], index);
     }
+
 
 </script>
 </body>
